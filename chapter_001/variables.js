@@ -8,19 +8,19 @@
 
 // ? print hello world
 
-// console.log("Hello world!");
-// console.log(45.5);
-// console.log(9 + "9" + 9);
+console.log("Hello world!");
+console.log(45.5);
+console.log(9 + "9" + 9);
 
 //! 006. What is Variables | JS All You Need to Know | JS Bangla Tutorials
 
-// var creatorName = "Arafat Nill";
-// var age = 21;
+var creatorName = "Arafat Nill";
+var age = 21;
 
-// console.log(creatorName + " knows JavaScript");
-// console.log("His age is only " + age);
-// console.log(creatorName + " is creating JavaScript course for free");
-// console.log("But this age is only " + age);
+console.log(creatorName + " knows JavaScript");
+console.log("His age is only " + age);
+console.log(creatorName + " is creating JavaScript course for free");
+console.log("But this age is only " + age);
 
 //! aigula variable a use korte parbe nah
 
@@ -40,8 +40,8 @@
 
 //! variable er name always camelCase or underscore (__) use korte hobe  like ↓
 
-// var mathNumber = 21;
-// var accountNumberDetailsId = 1010;
+var mathNumber = 21;
+var accountNumberDetailsId = 1010;
 
-// var math_number = 21;
-// var account_number_details_id = 1010;
+var math_number = 21;
+var account_number_details_id = 1010;

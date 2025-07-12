@@ -26,21 +26,21 @@
 // var nn = Number(itStr); // number jodi string a thake thole oita number a convart hoye jabe
 // console.log(nn);
 
-// var newNumber = 21.45;
-// var parseIntConvert = Number.parseInt(newNumber);
-// console.log(parseIntConvert); // output 21
+var newNumber = 21.45;
+var parseIntConvert = Number.parseInt(newNumber);
+console.log(parseIntConvert); // output 21
 
-// var isNumber = 22;
-// var parseFoltConvert = Number.parseFloat(isNumber);
-// console.log(parseFoltConvert); // output 22
+var isNumber = 22;
+var parseFoltConvert = Number.parseFloat(isNumber);
+console.log(parseFoltConvert); // output 22
 
 // ? amra koto boro number and soto number store korte parbo
-// console.log(Number.MAX_VALUE);
-// console.log(Number.MIN_VALUE);
+console.log(Number.MAX_VALUE);
+console.log(Number.MIN_VALUE);
 
 //? infinity Number
-// console.log(1 / 0); // output : infinity
+console.log(1 / 0); // output : infinity
 
 //? NaN not a number
-// console.log("string" / 21); // output : NaN
+console.log("string" / 21); // output : NaN
 

@@ -1,4 +1,4 @@
-//! 012. JS Null & Undefined | JS All You Need to Know | JS Bangla Tutorials
+//! 006. JS Null & Undefined | JS All You Need to Know | JS Bangla Tutorials
 
 //? javascript a jokhun ekta variable k dicliyer kori and oitar jodi kono value na dei tokhun oita undifiend.
 //? abar kono ekta variable a ekta value expect korci faka rakhte parbo na oita holo null. btu 2 ta same jinish nah

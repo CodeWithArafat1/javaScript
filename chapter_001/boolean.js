@@ -1,4 +1,4 @@
-//! 011. JS Basic Booleans | JS All You Need to Know | JS Bangla Tutorials
+//! 005. JS Basic Booleans | JS All You Need to Know | JS Bangla Tutorials
 
 //? boolean a just 2 ta value true and false
 var b1 = true;

@@ -331,3 +331,66 @@
 //       console.log("Number tring :", randNumber);
 //     }
 // }
+
+//! String Literal vs Constructor | JS All You Need to Know | JS Bangla Tutorials
+
+// const str = 'this is string litaral' //? string litaral
+// const str2 = String("This is string constructor") //? string constructor
+// const str3 = 10 + ""
+// console.log(str3);
+// const str4 = 10
+// const convert = str4.toString()
+// console.log(convert);
+
+// let c = 10 -'10'
+// console.log(c);
+
+//!  JS Escape Notation | JS All You Need to Know | JS Bangla Tutorials
+
+// const str = "this is a 'string'";
+// const str2 = "this is a \tstring";
+// console.log(str2);
+
+//! JS String Comparison | JS All You Need to Know | JS Bangla Tutorials
+
+//!!!! JavaScript uses Lexicographic System to compare to string
+// const a = "aaaZ";
+// const b = "aaaz";
+
+// console.log(a < b); // output : true
+// console.log("001" == 1); // output: true
+
+//! JS String Methods | JS All You Need to Know | JS Bangla Tutorials
+
+// const a = "I am"
+// const b = "Hi I am Arafat Nill and I am new webdeveloper!";
+
+// const c = a.concat(' ', b)
+// console.log(c);
+
+// const d = c.substring(5,11)
+// console.log(d);
+
+// console.log(c.startsWith('I am'));
+// console.log(c.endsWith('Nill'));
+
+// const arr = b.split(" ");
+// console.log(arr);
+
+// arr.map((item, index, fullArr) => {
+//   console.log(item);
+// });
+
+//! JS String Length | JS All You Need to Know | JS Bangla Tutorials
+
+// const str = "JS String Length | JS All You Need to Know | JS Bangla Tutorials";
+// let length = 0
+// for(;;){
+//     if(str.charAt(length) === ''){
+//         break
+//     }else{
+//         length++
+//     }
+// }
+// console.log(length);
+

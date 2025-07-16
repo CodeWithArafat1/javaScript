@@ -1,3 +1,5 @@
+//! ********** Array Basic ************
+
 //? *************** What is Array **********
 
 // ! Array is a Data Stucture where we can organize multiple data under a single variable
@@ -90,6 +92,19 @@
 
 //! JS Array Methods | JS All You Need to Know | JS Bangla Tutorials
 
-const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const arr2 = [2, 4, 6, 23, 6];
+// const obj = { name: "Arafat" };
 
-console.log(arr.join(" \\ "));
+// console.log(arr.join(" \\ "));
+// console.log(arr.fill(true));
+
+// console.log(arr.concat(arr2)); //? retrun new array
+
+// console.log(Array.isArray(obj)); //? its check is array
+
+// const arr3 = Array.from(arr); //? orginal array don't change
+
+// arr3[3] = 1000
+// console.log(arr);
+// console.log(arr3);

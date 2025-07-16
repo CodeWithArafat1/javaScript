@@ -32,3 +32,8 @@
 //? constuctor list 
 
 // String Number Boolean 
+
+
+let date = new Date()
+console.log(date.toTimeString());
+

@@ -167,3 +167,107 @@
 //? constuctor list
 
 // String Number Boolean
+//! 018. JS Date Functions | JS All You Need to Know | JS Bangla Tutorials
+
+// let date = new Date();
+// console.log(date.toDateString());
+// console.log(date.toTimeString());
+// console.log(date.toLocaleString());
+// console.log(date.toLocaleDateString());
+// console.log(date.getFullYear());
+// console.log(date.getDate());
+
+//! JS Switch Statement | JS All You Need to Know | JS Bangla Tutorials
+
+// const date = new Date();
+// const toDay = date.getDay();
+
+// function newDay(date) {
+//   console.log(`Today is ${date}`);
+// }
+
+// switch (toDay) {
+//   case 0:
+//     newDay("Sunday");
+//     break;
+//   case 1:
+//     newDay("Monday");
+//     break;
+//   case 2:
+//     newDay("Tuesday");
+//     break;
+//   case 3:
+//     newDay("Wednesday");
+//     break;
+//   case 4:
+//     newDay("Thursday");
+//     break;
+//   case 5:
+//     newDay("Friday");
+//     break;
+//   case 6:
+//     newDay("Saturday");
+//     break;
+
+//   default:
+//     newDay("Data not found");
+//     break;
+// }
+
+//! JS Ternary Operator | JS All You Need to Know | JS Bangla Tutorials
+
+// const n = 21;
+// let str = "";
+
+// if (n % 2 === 0) {
+//   str = "Even";
+// } else {
+//   str = "Odd";
+// }
+// console.log(str);
+
+//! ternari poarator
+//? condition ? true side : false side
+// const result = n % 2 === 0 ? "EVEN" : "ODD";
+// console.log(result);
+
+//! And Or Shorthand | JS All You Need to Know | JS Bangla Tutorials
+
+// const name = ""; //? empty string = false
+// const userName = "Arafat Nill";
+
+// const fullName = name || userName;
+// console.log(fullName);
+
+// const isOk = true;
+// isOk && console.log("Everything is okay!");
+
+// const userName = "Arafat Nill";
+
+// for (let i = 0; i <= 10; i++) {
+//   console.log(i + 1 + " " + userName);
+// }
+
+//! JS While Loop | JS All You Need to Know | JS Bangla Tutorials
+
+// let i = 0;
+
+// while (i < 10) {
+//   console.log("hello");
+//   i++;
+// }
+
+// let isRunning = true;
+
+// while (isRunning) {
+//   let randNumber = Math.floor(Math.random() * 10);
+//   if (randNumber === 9) {
+//     console.log("Number found :", randNumber);
+//     isRunning = false;
+//   } else {
+//     console.log("check numbers :", randNumber);
+//   }
+// }
+
+
+//! JS Do While Loop | JS All You Need to Know | JS Bangla Tutorials

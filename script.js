@@ -269,5 +269,65 @@
 //   }
 // }
 
-
 //! JS Do While Loop | JS All You Need to Know | JS Bangla Tutorials
+
+// let isRunning = false;
+
+// while (isRunning) {
+//   console.log("I am while loop!");
+// }
+
+// do {
+//   console.log("I am do while loop");
+// } while (isRunning);
+
+//! JS Nested Loops | JS All You Need to Know | JS Bangla Tutorials
+
+// let userInput = 10;
+
+// for (let i = 1; i <= userInput; i++) {
+//   let result = "";
+//   for (let j = 1; j <= i; j++) {
+//     result += " *";
+//   }
+//   console.log(result);
+// }
+
+//!  JS Break Statement | JS All You Need to Know | JS Bangla Tutorials
+
+// const findNumber = 10;
+
+// while (true) {
+//   let randNumber = Math.floor(Math.random() * 10 + 1);
+
+//   if (randNumber === findNumber) {
+//     console.log("Number found :", randNumber);
+
+//     break;
+//   } else {
+//     console.log("Number tring :", randNumber);
+//   }
+// }
+
+//!  JS Continue Statement | JS All You Need to Know | JS Bangla Tutorials
+
+// for (let i = 1; i <= 10; i++) {
+//   if (i === 5 || i === 7) {
+//       continue;
+//     }
+//     console.log(i);
+// }
+
+//! JS Infinity for Loop | JS All You Need to Know | JS Bangla Tutorials
+
+// for (;;) {
+//   let randNumber = Math.floor(Math.random() * 10 + 1);
+
+//     if (randNumber === 10) {
+//       console.log("Number found :", randNumber);
+
+//       break;
+//     } else {
+//       console.log("Number tring :", randNumber);
+//     }
+// }

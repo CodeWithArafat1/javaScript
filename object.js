@@ -78,10 +78,32 @@ const obj = {
 //   console.log(item);
 // });
 
-const obj2 = obj; //? 2 ta object er value change hoye jabe and same array er jonnow
+// const obj2 = obj; //? 2 ta object er value change hoye jabe and same array er jonnow
 
-const obj3 = Object.assign({}, obj); //? create new obj in original obj
+// const obj3 = Object.assign({}, obj); //? create new obj in original obj
 
-obj3.x = 100;
-console.log(obj);
-console.log(obj3);
+// obj3.x = 100;
+// console.log(obj);
+// console.log(obj3);
+
+// let counter = 10;
+
+// for (let i = 1; i <= counter; i++) {
+//   let result = "";
+
+//   for (let j = 1; j <= i; j++) {
+//     result += " * ";
+//   }
+//   console.log(result);
+// }
+
+let counter = 10;
+
+for (let i = 1; i <= counter; i++) {
+  let result = "";
+  for (let j = 1; j <= i; j++) {
+    result += " *";
+  }
+
+  console.log(result);
+}

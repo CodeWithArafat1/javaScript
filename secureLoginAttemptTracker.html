@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Secure Login Tracker</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #e0f7fa;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      h2 {
+        color: #00796b;
+      }
+      input {
+        padding: 10px;
+        margin: 5px;
+        width: 250px;
+        font-size: 1rem;
+      }
+      button {
+        padding: 10px 20px;
+        background-color: #00796b;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+      }
+      button:hover {
+        background-color: #004d40;
+      }
+      #message {
+        margin-top: 15px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+    <div id="message"></div>
+
+    <script>
+
+      function createLoginSystem() {
+        let attempts = 0;
+        const maxAttempts = 3;
+        const userName = "admin";
+        const userPassword = "123";
+
+        return function (username, password) {
+          const message = document.getElementById("message");
+
+          if (attempts === maxAttempts) {
+            message.style.color = "red";
+            message.textContent = "You are now blocked!";
+            return;
+          }
+
+          if (username === userName && password === userPassword) {
+            message.style.color = "green";
+            message.textContent = "login successfuly!";
+          } else {
+            attempts++;
+
+            if (attempts === maxAttempts) {
+              message.style.color = "red";
+              message.textContent =
+                " Wrong credentials. You are now blocked! try again leater!";
+            } else {
+              message.style.color = "orange";
+              message.textContent = `Wrong credentials! attempts left: ${attempts}`;
+            }
+          }
+        };
+      }
+
+      const secureLogin = createLoginSystem();
+
+      function login() {
+        const username = document.getElementById("username").value.trim();
+        const password = document.getElementById("password").value.trim();
+
+        secureLogin(username, password);
+      }
+    </script>
+  </body>
+</html>

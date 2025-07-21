@@ -105,36 +105,35 @@
 // counter.resetCount(); // Counter reset
 // console.log("total visitors", counter.getCount()); // output : 0
 
-// ! Debounce Function Generator
+// // ! Debounce Function Generator
 
-function createDebouncedFunction(originalFunc, delay) {
-  let timer = null;
+// function createDebouncedFunction(originalFunc, delay) {
+//   let timer = null;
 
-  return function (...arguments) {
-    if (timer) {
-      clearTimeout(timer);
-    }
+//   return function () {
+//     if (timer) {
+//       clearTimeout(timer);
+//     }
 
-    timer = setTimeout(() => {
-      originalFunc(...arguments);
-    }, delay);
-  };
-}
+//     timer = setTimeout(() => {
+//       originalFunc(...arguments);
+//     }, delay);
+//   };
+// }
 
-const debouncedSearch = createDebouncedFunction(searchHandler, 1000);
+// const debouncedSearch = createDebouncedFunction(searchHandler, 1000);
 
-debouncedSearch("h");
-debouncedSearch("he");
-debouncedSearch("hel");
-debouncedSearch("hell");
-debouncedSearch("hello");
+// debouncedSearch("h"); //? no exicute
+// debouncedSearch("he"); //? no exicute
+// debouncedSearch("hel"); //? no exicute
+// debouncedSearch("hell"); //? no exicute
+// debouncedSearch("hello"); //!  exicute
 
-function searchHandler(query) {
-  console.log("Search for", query);
-}
+// function searchHandler(query) {
+//   console.log("Search for", query);
+// }
 
 //! ✅ সংক্ষেপে: Debounce function-এর মূল কাজ হলো: 👉 যখন কোনো ফাংশন বারবার কল হয়, তখন সেটা শুধু শেষবার কল হওয়া ফাংশনটিকেই নির্দিষ্ট সময় পরে এক্সিকিউট করে, আগেরগুলো বাতিল করে দেয়।
-
 
 //? 🎯 মূল উদ্দেশ্য: Unnecessary বা বারবার event trigger কে নিয়ন্ত্রণ করা।
 
@@ -151,7 +150,6 @@ function searchHandler(query) {
 // debouncedSearch("Hell");
 // debouncedSearch("Hello");
 
-
 //! ...args কী করে?
 //? ...args হচ্ছে Rest Parameter Syntax, যা JavaScript এ ব্যবহার হয় একটি ফাংশনে একাধিক আর্গুমেন্টকে একত্রে একটি array-র মতো সংগ্রহ করার জন্য
 
@@ -159,3 +157,44 @@ function searchHandler(query) {
 //   console.log(args);
 // }
 // exampleFunction(1, 2, 3, 4, 5, 6, "hello");
+
+//! 🎯 Custom Timer with Start / Pause / Reset
+
+function createTimer() {
+  let time = 0;
+  let interValId = null;
+
+  return {
+    start: function () {
+      if (interValId) {
+        console.log("Timer Already running...");
+        return;
+      }
+
+      interValId = setInterval(() => {
+        time++;
+        console.log("Time : ", time, "seconds");
+      }, 1000);
+    },
+    pause: function () {
+      if (!interValId) {
+        console.log("Timer is not running");
+        return;
+      }
+      clearInterval(interValId);
+      interValId = null;
+      console.log("Timer Paused.");
+    },
+
+    getTime: function () {
+      return time;
+    },
+    reset: function () {
+      clearInterval(interValId);
+      interValId = null;
+      time = 0;
+    },
+  };
+}
+
+createTimer();

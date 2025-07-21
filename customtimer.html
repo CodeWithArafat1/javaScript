@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Timer</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f0f4f8;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 30px;
+      }
+      #time {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #ff0000;
+      }
+      button {
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      .start {
+        background-color: #28a745;
+        color: white;
+      }
+      .pause {
+        background-color: #ffc107;
+        color: black;
+      }
+      .reset {
+        background-color: #dc3545;
+        color: white;
+      }
+      button:hover {
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Custom Timer</h1>
+    <div id="time">0 s</div>
+
+    <div>
+      <button class="start" onclick="timer.start()">Start</button>
+      <button class="pause" onclick="timer.pause()">Pause</button>
+      <button class="reset" onclick="timer.reset()">Reset</button>
+    </div>
+
+    <script>
+      function createTimer() {
+        let time = 0;
+        let intervalID = null;
+        const showTime = document.getElementById("time");
+
+        function updateUI() {
+          showTime.innerText = `${time} s`;
+        }
+
+        return {
+          start: function () {
+            if (intervalID) {
+              alert("time is running...");
+              return;
+            }
+            intervalID = setInterval(() => {
+              time++;
+              updateUI();
+            }, 1000);
+          },
+          pause: function () {
+            if (!intervalID) {
+              alert("Time paused!");
+              return;
+            }
+            clearInterval(intervalID);
+          },
+          reset: function () {
+            clearInterval(intervalID);
+            intervalID = null;
+            time = 0;
+            updateUI();
+          },
+        };
+      }
+      const timer = createTimer();
+    </script>
+  </body>
+</html>

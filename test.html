@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        gap: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      input {
+        padding: 10px;
+        outline: none;
+        border: 2px solid crimson;
+        border-radius: 5px;
+        font-size: 20px;
+      }
+      button {
+        padding: 10px 25px;
+        border: none;
+        background-color: crimson;
+        color: white;
+        font-size: 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      #message {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Secure Login System!</h1>
+    <input type="text" id="userName" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+
+    <div id="message"></div>
+
+    <script>
+      function secureLoginSystem() {
+        let tryCount = 0;
+        let maxTry = 3;
+        const userName = "admin";
+        const userPassword = "123";
+
+        return function (username, passowrd) {
+          const message = document.getElementById("message");
+
+          if (tryCount >= maxTry) {
+            message.style.color = "red";
+            message.textContent = "You are blocked!";
+            return;
+          }
+
+          if (username === userName && passowrd === userPassword) {
+            message.style.color = "green";
+            message.textContent = "Login successfuly!";
+            tryCount = 0;
+          } else {
+            tryCount++;
+
+            if (tryCount >= maxTry) {
+              message.style.color = "red";
+              message.textContent = "to many request! you are now block";
+            } else {
+              message.style.color = "orange";
+              message.textContent = `You have ${
+                maxTry - tryCount
+              } attempts left.`;
+            }
+          }
+        };
+      }
+
+      const secureLogin = secureLoginSystem();
+
+      function login() {
+        const user = document.getElementById("userName").value.trim();
+        const pass = document.getElementById("password").value.trim();
+        secureLogin(user, pass);
+      }
+    </script>
+  </body>
+</html>

@@ -36,7 +36,7 @@ function sum(a, b) {
 
 sample(5, 8, sum);
 
-//!  we can careate function as we need 
+//!  we can careate function as we need
 sample(5, 8, (a, b) => {
   return a - b;
 });

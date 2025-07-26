@@ -160,41 +160,56 @@
 
 //! 🎯 Custom Timer with Start / Pause / Reset
 
-function createTimer() {
-  let time = 0;
-  let interValId = null;
+// function createTimer() {
+//   let time = 0;
+//   let interValId = null;
 
-  return {
-    start: function () {
-      if (interValId) {
-        console.log("Timer Already running...");
-        return;
-      }
+//   return {
+//     start: function () {
+//       if (interValId) {
+//         console.log("Timer Already running...");
+//         return;
+//       }
 
-      interValId = setInterval(() => {
-        time++;
-        console.log("Time : ", time, "seconds");
-      }, 1000);
-    },
-    pause: function () {
-      if (!interValId) {
-        console.log("Timer is not running");
-        return;
-      }
-      clearInterval(interValId);
-      interValId = null;
-      console.log("Timer Paused.");
-    },
+//       interValId = setInterval(() => {
+//         time++;
+//         console.log("Time : ", time, "seconds");
+//       }, 1000);
+//     },
+//     pause: function () {
+//       if (!interValId) {
+//         console.log("Timer is not running");
+//         return;
+//       }
+//       clearInterval(interValId);
+//       interValId = null;
+//       console.log("Timer Paused.");
+//     },
 
-    getTime: function () {
-      return time;
-    },
-    reset: function () {
-      clearInterval(interValId);
-      interValId = null;
-      time = 0;
-    },
-  };
+//     getTime: function () {
+//       return time;
+//     },
+//     reset: function () {
+//       clearInterval(interValId);
+//       interValId = null;
+//       time = 0;
+//     },
+//   };
+// }
+
+// createTimer();
+
+// for (let i = 1; i <= 5; i++) {
+//   setTimeout(() => {
+//     console.log(i);
+//   }, 1000 * i);
+// }
+
+//! for loop with closer 
+for (let i = 1; i <= 5; i++) {
+  (function (n) {
+    setTimeout(() => {
+      console.log(n);
+    }, 1000 * n);
+  })(i);
 }
-
-createTimer();

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        height: 100vh;
+        background-color: #fefef0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      input {
+        padding: 10px 20px;
+        font-size: 20px;
+        outline: none;
+        border: 2px solid orangered;
+        border-radius: 5px;
+        text-transform: capitalize;
+      }
+
+      #show {
+        font-size: 30px;
+        margin-top: 50px;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="">
+      <input type="text" name="" id="input" placeholder="type someting" />
+      <div id="show"></div>
+    </div>
+
+    <script>
+      const input = document.getElementById("input");
+      const show = document.getElementById("show");
+
+      function createTime(func, dely) {
+        let timer = null;
+
+        return function (...args) {
+          if (timer) {
+            clearTimeout(timer);
+          }
+
+          timer = setTimeout(() => {
+            func(...args);
+          }, dely);
+        };
+      }
+
+      function showInput(value) {
+        show.textContent = `You typed: ${value}`;
+      }
+
+      const createTimeShow = createTime(showInput, 500);
+
+      input.addEventListener("input", (e) => {
+        createTimeShow(e.target.value);
+      });
+    </script>
+  </body>
+</html>

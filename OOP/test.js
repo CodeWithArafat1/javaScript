@@ -265,8 +265,53 @@
 
 // myAC.showStatus();
 
-
 // myAC.semulateColing()
 // myAC.showStatus()
 
+// function BankAccount(accountHolder, initialBalance) {
+//   this.accountHolder = accountHolder;
+//   let balance = initialBalance;
 
+//   this.withdrow = function (ammount) {
+//     if (balance >= ammount) {
+//       balance -= ammount;
+
+//       console.log(
+//         `Transaction for ${this.accountHolder}: Withdrow ${ammount}. new balance ${balance}.`
+//       );
+//     } else {
+//       console.log(`Transaction for ${accountHolder}: Insufficient funds.`);
+//     }
+//   };
+// }
+
+// BankAccount.prototype = {
+//   generateMonthlyStatement: function () {
+//     console.log(`---- Genarating statement for ${this.accountHolder} ----`);
+//     console.log(`Applying monthly service fee..`);
+
+//     // this.withdrow(210);
+//   },
+// };
+
+// const p1 = new BankAccount("Arafat", 1000);
+// const p2 = new BankAccount("Nill", 350);
+
+// p1.generateMonthlyStatement();
+// p1.withdrow(20);
+// console.log(`----------------------------`);
+// p2.generateMonthlyStatement();
+// p2.withdrow(20);
+
+
+//1. create tow array
+
+
+const fruits = ['Apple','banana', 'orange']
+const vegetables = ['carrot', 'pototo', 'tomato']
+
+
+
+const fruitsVegetables = fruits.concat(vegetables)
+
+console.log(fruitsVegetables)

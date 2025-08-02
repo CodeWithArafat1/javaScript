@@ -90,43 +90,43 @@
 
 //! Improtent
 
-const Rect = function (width, hieght) {
-  this.width = width;
-  this.hieght = hieght;
+// const Rect = function (width, hieght) {
+//   this.width = width;
+//   this.hieght = hieght;
 
-  let position = {
-    x: 20,
-    y: -100,
-  };
+//   let position = {
+//     x: 20,
+//     y: -100,
+//   };
 
-  this.drow = function () {
-    console.log(`I am recangle...`);
-    printPro();
-  };
+//   this.drow = function () {
+//     console.log(`I am recangle...`);
+//     printPro();
+//   };
 
-  const printPro = function () {
-    console.log(`My width is ${width}`);
-    console.log(`My height is ${hieght}`);
-    console.log(`My position X ${position.x} Y ${position.y}`);
-  };
+//   const printPro = function () {
+//     console.log(`My width is ${width}`);
+//     console.log(`My height is ${hieght}`);
+//     console.log(`My position X ${position.x} Y ${position.y}`);
+//   };
 
-  Object.defineProperty(this, "position", {
-    get: () => {
-      return position;
-    },
-    set: (value) => {
-      position = value;
-    },
-  });
-};
+//   Object.defineProperty(this, "position", {
+//     get: () => {
+//       return position;
+//     },
+//     set: (value) => {
+//       position = value;
+//     },
+//   });
+// };
 
-const rect1 = new Rect(10, 20);
+// const rect1 = new Rect(10, 20);
 
-rect1.drow();
+// rect1.drow();
 
-rect1.position = {
-  x: 50,
-  y: -10,
-};
+// rect1.position = {
+//   x: 50,
+//   y: -10,
+// };
 
-console.log(rect1.position);
+// console.log(rect1.position);

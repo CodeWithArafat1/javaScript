@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI Component Library - সম্পূর্ণ উদাহরণ</title>
+    <style>
+      /* General Styles */
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+        background-color: #f4f7f6;
+        color: #333;
+        padding: 20px;
+      }
+
+      /* Button Styles */
+      .custom-button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .custom-button:hover {
+        background-color: #0056b3;
+      }
+
+      /* Modal Styles */
+      .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        display: none; /* Initially hidden */
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      }
+
+      .modal-content {
+        background-color: white;
+        padding: 25px;
+        border-radius: 8px;
+        width: 90%;
+        max-width: 500px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        animation: fadeIn 0.3s ease-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .modal-content h2 {
+        margin-top: 0;
+      }
+
+      .modal-content .close-btn {
+        background-color: #dc3545;
+      }
+      .modal-content .close-btn:hover {
+        background-color: #c82333;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>UI Component Library</h1>
+    <p>নিচের বাটনে ক্লিক করলে একটি মডাল খুলবে।</p>
+
+    <div id="app-container"></div>
+
+    <script>
+      function Widget(id) {
+        this.id = id || "widget-" + Math.random().toString(36).substring(2, 6);
+        this.domElement = null;
+      }
+
+      Widget.prototype.render = function () {
+        throw new Error(
+          "Render method must be implemented by child components"
+        );
+      };
+
+      Widget.prototype.destroy = function () {
+        if (this.domElement) {
+          this.domElement.remove();
+          this.domElement = null;
+        }
+      };
+      
+      Modal.prototype = Object.create(Widget.prototype);
+      Modal.prototype.constructor = Modal;
+
+      function Modal(id, title, content) {
+        Widget.call(this, id);
+        this.title = title;
+        this.content = content;
+      }
+
+      Modal.prototype.render = function () {
+        const modalHTML = `
+            <div id="${this.id}" class="modal-overlay">
+                <div class="modal-content">
+                    <h1>${this.title}</h1>
+                    <p>${this.content}</p>
+                    <button class="custom-button close-btn">Close</button>
+                </div>
+            </div>
+        `;
+        document.body.insertAdjacentHTML("beforeend", modalHTML);
+        this.domElement = document.getElementById(this.id);
+
+        this.domElement
+          .querySelector(".close-btn")
+          .addEventListener("click", this.close.bind(this));
+      };
+
+      Modal.prototype.open = function () {
+        if (!this.domElement) {
+          this.render();
+        }
+        this.domElement.style.display = "flex";
+      };
+
+      Modal.prototype.close = function () {
+        this.destroy();
+      };
+
+      Button.prototype = Object.create(Widget.prototype);
+      Button.prototype.constructor = Button;
+
+      function Button(id, text, onclickCallback) {
+        Widget.call(this, id);
+        this.text = text;
+        this.onclickCallback = onclickCallback;
+      }
+
+      Button.prototype.render = function (containerSelector) {
+        const container = document.querySelector(containerSelector);
+
+        if (!container) {
+          console.error("Container not found!");
+          return;
+        }
+        const buttonHtml = `<button id="${this.id}" class="custom-button">${this.text}</button>`;
+        container.insertAdjacentHTML("beforeend", buttonHtml);
+        this.domElement = document.getElementById(this.id);
+
+        this.domElement.addEventListener("click", this.onclickCallback);
+      };
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const myModal = new Modal(
+          "WelcomeModal",
+          "Hello",
+          "This is inharit modal"
+        );
+
+        const openModalButton = new Button(
+          "openBtn",
+          "Open Your Modal",
+          function () {
+            myModal.open();
+          }
+        );
+
+        openModalButton.render("#app-container");
+      });
+    </script>
+  </body>
+</html>

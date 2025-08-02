@@ -160,4 +160,3 @@
 
 // amra r1 obj er own propaty  gula dekhar jonno //! Object.hasOwnProparty diye dekhte pari
 
-

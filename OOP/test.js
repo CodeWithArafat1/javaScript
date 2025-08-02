@@ -315,3 +315,4 @@ const vegetables = ['carrot', 'pototo', 'tomato']
 const fruitsVegetables = fruits.concat(vegetables)
 
 console.log(fruitsVegetables)
+

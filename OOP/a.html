@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script>
+      function Widget(id) {
+        this.id = id || "widget-" + Math.random().toString(36).substring(2, 9);
+      }
+
+      Widget.prototype.render = function () {
+        throw new Error(
+          "Tomer aikhane error ase age tumi tomar error fix koro then ami thik kore kaj korbo"
+        );
+      };
+
+      TextWidget.prototype = Object.create(Widget.prototype);
+      TextWidget.prototype.constructor = TextWidget;
+
+      function TextWidget(id, text) {
+        Widget.call(this, id);
+        this.text = text;
+      }
+
+      TextWidget.prototype.render = function (showText) {
+        const container = document.querySelector(showText);
+        if (!container) {
+          console.error("Container not found!");
+        }
+        const myText = `<p id='${this.id}'>${this.text}</p>`;
+        container.insertAdjacentHTML("beforeend", myText);
+      };
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const t1 = new TextWidget(this.id, "this is my message");
+
+        t1.render("#root");
+      });
+    </script>
+  </body>
+</html>

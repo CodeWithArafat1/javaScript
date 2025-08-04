@@ -307,12 +307,26 @@
 //1. create tow array
 
 
-const fruits = ['Apple','banana', 'orange']
-const vegetables = ['carrot', 'pototo', 'tomato']
+// const fruits = ['Apple','banana', 'orange']
+// const vegetables = ['carrot', 'pototo', 'tomato']
 
 
 
-const fruitsVegetables = fruits.concat(vegetables)
+// const fruitsVegetables = fruits.concat(vegetables)
 
-console.log(fruitsVegetables)
+// console.log(fruitsVegetables)
 
+
+
+// let obj = {
+//     a: 10,
+//     b: 20,
+//     c: 30
+// }
+
+// let obj2 = {
+//     ...obj
+// }
+
+
+// console.log(obj2)

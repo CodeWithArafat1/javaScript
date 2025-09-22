@@ -1,0 +1,136 @@
+{
+  "players": [
+    {
+      "id": 1,
+      "name": "Tamim Iqbal",
+      "image": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSD_MPLrHtX25COWVOemiOMhPXD34lvwuF7GYmEgVgDxVWdyn6NA0hhhGryqnk_EUPedAENiaEXDy2rhxP2Zd6vPR791U-JPGj6JmBFIA",
+      "country": "Bangladesh",
+      "role": "Batsman",
+      "rating": 8.7,
+      "battingStyle": "Left-handed",
+      "bowlingStyle": "N/A",
+      "priceUSD": 475000
+    },
+    {
+      "id": 2,
+      "name": "Shakib Al Hasan",
+      "image": "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcTCbjTIedmQdn-KwXhJI2n1cywINB54Nd0gRHJoxd1UCh8m2NWk28NBvuUSuAJEk10SO9Nee0vwotSGiLQ",
+      "country": "Bangladesh",
+      "role": "All-rounder",
+      "rating": 9.4,
+      "battingStyle": "Left-handed",
+      "bowlingStyle": "Slow left-arm orthodox",
+      "priceUSD": 520000
+    },
+    {
+      "id": 3,
+      "name": "Chris Gayle",
+      "image": "https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcSKiKhITIod4sQ4K2qL9yBYilcHtcYCAunNHDF33SvPpue5lTRDqAGXAK7ML4Tr0LTBZ_rQ-m4YrXoXk08",
+      "country": "West Indies",
+      "role": "Batsman",
+      "rating": 9.1,
+      "battingStyle": "Left-handed",
+      "bowlingStyle": "Right-arm off-break",
+      "priceUSD": 490000
+    },
+    {
+      "id": 4,
+      "name": "Virat Kohli",
+      "image": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT1lKH9EbWJC_pCNYK-HjfploTD7P0SH8xaa5bW1f4fLRJoHujHUOT5SHnao9NOx7BJWXSaMa1pMeaNGeVKd4XihKat0QTAkKfGQ9nLpnAZ",
+      "country": "India",
+      "role": "Batsman",
+      "rating": 9.8,
+      "battingStyle": "Right-handed",
+      "bowlingStyle": "Right-arm medium",
+      "priceUSD": 950000
+    },
+    {
+      "id": 5,
+      "name": "Babar Azam",
+      "image": "https://www.espncricinfo.com/db/PICTURES/CMS/320500/320516.jpg",
+      "country": "Pakistan",
+      "role": "Batsman",
+      "rating": 9.5,
+      "battingStyle": "Right-handed",
+      "bowlingStyle": "Right-arm off-break",
+      "priceUSD": 880000
+    },
+    {
+      "id": 6,
+      "name": "Kane Williamson",
+      "image": "https://www.espncricinfo.com/db/PICTURES/CMS/320400/320461.jpg",
+      "country": "New Zealand",
+      "role": "Batsman",
+      "rating": 9.3,
+      "battingStyle": "Right-handed",
+      "bowlingStyle": "Right-arm off-break",
+      "priceUSD": 850000
+    },
+    {
+      "id": 7,
+      "name": "Rashid Khan",
+      "image": "https://www.espncricinfo.com/db/PICTURES/CMS/320500/320506.jpg",
+      "country": "Afghanistan",
+      "role": "Bowler",
+      "rating": 9.6,
+      "battingStyle": "Right-handed",
+      "bowlingStyle": "Right-arm leg-break",
+      "priceUSD": 750000
+    },
+    {
+      "id": 8,
+      "name": "Steve Smith",
+      "image": "https://www.espncricinfo.com/db/PICTURES/CMS/320400/320489.jpg",
+      "country": "Australia",
+      "role": "Batsman",
+      "rating": 9.2,
+      "battingStyle": "Right-handed",
+      "bowlingStyle": "Right-arm leg-break",
+      "priceUSD": 820000
+    },
+    {
+      "id": 9,
+      "name": "Joe Root",
+      "image": "https://www.espncricinfo.com/db/PICTURES/CMS/320400/320498.jpg",
+      "country": "England",
+      "role": "Batsman",
+      "rating": 9.1,
+      "battingStyle": "Right-handed",
+      "bowlingStyle": "Right-arm off-break",
+      "priceUSD": 800000
+    },
+    {
+      "id": 10,
+      "name": "Jasprit Bumrah",
+      "image": "https://www.espncricinfo.com/db/PICTURES/CMS/320400/320493.jpg",
+      "country": "India",
+      "role": "Bowler",
+      "rating": 9.7,
+      "battingStyle": "Right-handed",
+      "bowlingStyle": "Right-arm fast",
+      "priceUSD": 780000
+    },
+    {
+      "id": 11,
+      "name": "Mushfiqur Rahim",
+      "image": "https://www.espncricinfo.com/db/PICTURES/CMS/322300/322378.jpg",
+      "country": "Bangladesh",
+      "role": "Wicketkeeper-Batsman",
+      "rating": 8.8,
+      "battingStyle": "Right-handed",
+      "bowlingStyle": "N/A",
+      "priceUSD": 450000
+    },
+    {
+      "id": 12,
+      "name": "Litton Das",
+      "image": "https://www.espncricinfo.com/db/PICTURES/CMS/322300/322380.jpg",
+      "country": "Bangladesh",
+      "role": "Wicketkeeper-Batsman",
+      "rating": 8.6,
+      "battingStyle": "Right-handed",
+      "bowlingStyle": "Right-arm off-break",
+      "priceUSD": 420000
+    }
+  ]
+}
